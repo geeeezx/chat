@@ -84,7 +84,7 @@ export default function Home() {
               AI 文件助手 📈
             </h2>
             <p className={inter.className}>
-              支持分析PDF、CSV、Word 超高效办公
+              支持分析PDF、CSV、Word 超高效学习与办公
             </p>
           </a>
 
