@@ -5,6 +5,8 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  height: calc(100% - 64px);
+  padding-top: 64px;
 }
 
 .description {
@@ -45,8 +47,59 @@
   width: var(--max-width);
   max-width: 100%;
 }
-
 .card {
+  width: 190px;
+  height: 250px;
+  background: rgba(var(--card-rgb), 0);
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card h2 {
+  z-index: 1;
+  color: rgb(91, 87, 87);
+  font-size: 2em;
+  
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+.card:hover:before {
+  background-image: linear-gradient(180deg, rgb(81, 255, 0), red);
+  animation: rotBGimg 3.5s linear infinite;
+} 
+
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  background: #ffffff;
+  inset: 5px;
+  border-radius: 15px;
+} 
+/* .card {
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
@@ -72,85 +125,6 @@
   max-width: 30ch;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
-}
-
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
-}
-
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
-}
-
-.center::before,
-.center::after {
-  content: '';
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
-}
-
-.logo,
-.thirteen {
-  position: relative;
-}
-
-.thirteen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 75px;
-  height: 75px;
-  padding: 25px 10px;
-  margin-left: 16px;
-  transform: translateZ(0);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: 0px 2px 8px -1px #0000001a;
-}
-
-.thirteen::before,
-.thirteen::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-}
-
-/* Conic Gradient Animation */
-.thirteen::before {
-  animation: 6s rotate linear infinite;
-  width: 200%;
-  height: 200%;
-  background: var(--tile-border);
-}
-
-/* Inner Square */
-.thirteen::after {
-  inset: 0;
-  padding: 1px;
-  border-radius: var(--border-radius);
-  background: linear-gradient(
-    to bottom right,
-    rgba(var(--tile-start-rgb), 1),
-    rgba(var(--tile-end-rgb), 1)
-  );
-  background-clip: content-box;
-}
-
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -161,7 +135,7 @@
   .card:hover span {
     transform: translateX(4px);
   }
-}
+} 
 
 @media (prefers-reduced-motion) {
   .thirteen::before {
@@ -188,6 +162,8 @@
 
   .card {
     padding: 1rem 2.5rem;
+    margin: 5rem;
+    align-self: center;
   }
 
   .card h2 {
@@ -228,7 +204,7 @@
     border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
     background: linear-gradient(
       to bottom,
-      rgba(var(--background-start-rgb), 1),
+      rgba(var(--background-start-rgb), 0),
       rgba(var(--callout-rgb), 0.5)
     );
     background-clip: padding-box;
@@ -257,22 +233,60 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
 
-  .logo,
-  .thirteen img {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+.navList {
+  list-style-type: none;
+  display: flex;
 }
+
+.navItem {
+  margin:auto
+}
+
+.navItem span {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.navLogo{
+  margin-left: 1.5rem;
+} 
+.navLogo span{
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.navItem a:hover {
+  color: #0070f3;
+}
+
+ 
+
+
+ .backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+
