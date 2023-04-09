@@ -9,32 +9,51 @@
   padding-top: 64px;
 }
 
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  /* font-family: var(--font-mono); */
+.land{
+  margin-top: 5rem;
+}
+.land p{
+  margin-top: 0.5rem;
+  margin-bottom: auto;
+  color: rgb(143, 134, 134);
+  font-size: 1.5rem;
 }
 
-.description a {
+.button_container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 20px; /* 设置与上方元素的距离 */
 }
 
-.description p {
-  position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+/* this button is inspired from this -- https://www.newline.co/pricing */
+.startButton {
+  --width: 150px;
+  --timing: 2s;
+  border: 0;
+  width: var(--width);
+  padding-block: 1em;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  background: rgb(64, 192, 87);
+  transition: all 0.2s;
+  border-radius: 3px;
 }
+
+.startButton:hover {
+  background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
+  animation: var(--timing) linear dance6123 infinite;
+  transform: scale(1.1) translateY(-1px);
+}
+
+@keyframes dance6123 {
+  to {
+    background-position: var(--width);
+  }
+}
+
+
 
 .code {
   font-weight: 700;
@@ -46,6 +65,7 @@
   grid-template-columns: repeat(4, minmax(25%, auto));
   width: var(--max-width);
   max-width: 100%;
+  margin-top: 2rem;
 }
 .card {
   width: 190px;
@@ -57,13 +77,20 @@
   place-items: center;
   overflow: hidden;
   border-radius: 20px;
+  padding: 20px;
 }
 
 .card h2 {
   z-index: 1;
   color: rgb(91, 87, 87);
-  font-size: 2em;
-  
+  font-size: 1.5em;
+  margin-bottom: auto;
+}
+
+.card p {
+  z-index: 1;
+  margin-top: auto;
+  color:rgb(143, 134, 134)
 }
 
 .card::before {
@@ -276,17 +303,6 @@
 }
 
  
-
-
- .backgroundVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
 
 
 

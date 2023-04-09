@@ -109,9 +109,9 @@ a {
   unicode-range: U+0020-007E;
 }
 h1 {
-  font-family: 'MyFont_en';
+  font-family: 'MyFont_en3';
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 5rem;
   line-height: 1.2;
   letter-spacing: -0.025em;
   color: #000;
@@ -127,14 +127,23 @@ h1 {
 h2
 {
   font-family: 'MyFont_zh';
-  color:#000
 }
 @font-face {
-  font-family: 'MyFont_zh3';
+  font-family: 'MyFont_zh2';
   src: url('../public/MyFont_zh2/NotoSansSC-Regular.otf');
+  font-size-adjust: 0.5;
+}
+@font-face {
+  font-family: 'MyFont_en2';
+  src: url('../public/Montserrat/static/Montserrat-Regular.ttf');
+  font-size-adjust: 0.5;
+}
+@font-face {
+  font-family: 'MyFont_en3';
+  src: url('../public/Montserrat/static/Montserrat-Bold.ttf');
   font-size-adjust: 0.5;
 }
 p
 {
-  font-family: 'MyFont_zh3';
+  font-family: 'MyFont_en2';
 }

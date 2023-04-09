@@ -38,22 +38,19 @@ export default function Home() {
 
       <main className={styles.main}>
        
-        <div className={styles.description}>
-        </div>
 
-        <div>
+        <div className={styles.land}>
           <h1>
             Chat with DondaAI
           </h1>
-          
-          {/* <Image
-            // className={styles.logo}
-            src="/logo.png"
-            alt="Next.js Logo"
-            width={400}
-            height={400}
-            priority
-          /> */}
+          <p>
+              New Generation of AGI Platform for All
+          </p>
+          <div className={styles.button_container}>
+            <button className={styles.startButton}>
+            开始免费试用
+            </button>
+          </div>
         </div>
 
         <div className={styles.grid}>
