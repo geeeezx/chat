@@ -45,7 +45,7 @@ export default function Home() {
 
         <div className={styles.grid}>
           <a
-            href="https://dondaai-chat.vercel.app"
+            href="https://dondaai.netlify.app"
             className={styles.card}
           >
             <div className={styles.align}>
@@ -62,7 +62,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://dondaai.netlify.app"
             className={styles.card}
           >
             <div className={styles.align}>
