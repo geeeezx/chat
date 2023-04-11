@@ -18,16 +18,6 @@ export default function Home() {
       </Head>
       <header className={styles.navbar}>
         <ul className={styles.navList}>
-          {/* <li className={styles.navItem}>
-            <Link href="https://nextjs.org">
-              <span>Home</span>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="https://nextjs.org">
-            <span>About</span>
-            </Link>
-          </li> */}
           <li className={styles.navItem}>
             <Link href="https://nextjs.org">
               <span>DondaAI.com</span>
@@ -55,7 +45,7 @@ export default function Home() {
 
         <div className={styles.grid}>
           <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="/chat"
             className={styles.card}
           >
             <div className={styles.align}>
