@@ -19,7 +19,7 @@ export default function Home() {
       <header className={styles.navbar}>
         <ul className={styles.navList}>
           <li className={styles.navItem}>
-            <Link href="https://nextjs.org">
+            <Link href="https://www.dondaai.com">
               <span>DondaAI.com</span>
             </Link>
           </li>
@@ -36,11 +36,11 @@ export default function Home() {
           <p>
               New Generation of AGI Platform for All
           </p>
-          <div className={styles.button_container}>
+          <Link className={styles.button_container} href="https://dondaai.netlify.app">
             <button className={styles.startButton}>
             开始免费试用
             </button>
-          </div>
+          </Link>
         </div>
 
         <div className={styles.grid}>
