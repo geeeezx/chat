@@ -45,7 +45,7 @@ export default function Home() {
 
         <div className={styles.grid}>
           <a
-            href="/chat"
+            href="https://dondaai-chat.vercel.app"
             className={styles.card}
           >
             <div className={styles.align}>
