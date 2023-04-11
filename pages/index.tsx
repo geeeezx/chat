@@ -105,10 +105,10 @@ export default function Home() {
               <span className={styles.green}></span>
             </div>
             <h2>
-            智能翻译 ✍️
+            Auto GPT ⚙️
             </h2>
             <p >
-            随时随地跨越一切语言障碍
+              AI自动化分配任务
             </p>
           </a>
         </div>
